@@ -1,0 +1,23 @@
+th, td {
+    padding: 8px;
+    line-height: 1.5;
+    vertical-align: top;
+    border: 1px solid #ddd;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+    clear: left;
+}
+.pages div{
+    float: left;
+    padding: 8px;
+}
+.filter div{
+    float: left;
+    padding: 8px;
+
+}
+select{
+    width: 100px;
+}

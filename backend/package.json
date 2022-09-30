@@ -1,0 +1,16 @@
+{
+  "name": "table_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "prestart": "node create-table.js 100",
+    "start": "node main.js",
+    "rows:fill": "node create-table.js 1000"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "pg": "^8.8.0"
+  }
+}

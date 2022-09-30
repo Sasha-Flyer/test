@@ -1,0 +1,9 @@
+{
+  "user": "postgres",
+  "host": "localhost",
+  "database": "postgres",
+  "password": "1234",
+  "port": 5432,
+  "table_name": "items",
+  "backend_port": 2999
+}
