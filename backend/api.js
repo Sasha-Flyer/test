@@ -6,14 +6,12 @@ const api_to_query = (request) => {
   const { page, limit } = request; // сразу получаем пагинацию
   delete request.page;
   delete request.limit;
-  console.log(page);
-  console.log(limit);
 
   let query = `SELECT ${CELLS.join(', ')} FROM items `;
   // парсим запрос для фильтрации:
   for (const [key, value] of Object.entries(request)) {
     const parsed_key = key.split(".");
-    if (!CELLS.includes(parsed_key[0])) throw new Error('validation error');
+    if (!CELLS.includes(parsed_key[0])) throw new Error('validation error'); // защита от кастомных sql запросов
 
     switch (parsed_key[1]) {
       case 'lt': {
@@ -43,7 +41,6 @@ const api_to_query = (request) => {
   }
 
   query += ';';
-  console.log(query)
   return query;
 }
 module.exports.api_to_query = api_to_query
